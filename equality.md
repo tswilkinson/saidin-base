@@ -1,6 +1,6 @@
 ```
 { Are-Equal : (B : Type) -> (A : Type) -> B -> A -> Type
-; are-equal : (A: Type) -> (a : A) -> a (a (A (A Are-Equal)))
+; are-equal : (A : Type) -> (a : A) -> a (a (A (A Are-Equal)))
 }
 
 { Are-Equal-Functions : (A : Type)
