@@ -21,7 +21,7 @@
     -> f (g (F (G (A Are-Equal-Functions))))
 ; are-equal (f (g (F (G (A
     equal-functions-are-equal-as-functions)))))
-    = (a |-> a f (a F are-equal)) (f (g (F (G (A are-equal-functions)))))
+    = (a : A |-> a f (a F are-equal)) (f (g (F (G (A are-equal-functions)))))
 }
 
 { Are-Equal-Simple-Functions : (A : Type)
@@ -29,7 +29,7 @@
     -> (A -> C) -> (A -> B)
     -> Type
 ; f (g (B (C (A Are-Equal-Simple-Functions
-    = f (g ((a |-> B) ((a |-> C) (A Are-Equal-Functions))))
+    = f (g ((a : A |-> B) ((a : A |-> C) (A Are-Equal-Functions))))
 }
 
 { are-equal-simple-functions : (A : Type)
@@ -38,7 +38,7 @@
     -> ((a : A) -> a f (a g (B (C Are-Equal))))
     -> f (g (B (C (A Are-Equal-Simple-Functions))))
 ; proof (f (g (B (C (A are-equal-simple-functions)))))
-    = proof (f (g ((a |-> B) ((a |-> C) (A are-equal-functions)))))
+    = proof (f (g ((a : A |-> B) ((a : A |-> C) (A are-equal-functions)))))
 }
 
 { congruence : (B : Type) -> (A : Type) -> (f : A -> B)
